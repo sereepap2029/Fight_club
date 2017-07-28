@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond $1 !^(index\.php|css|assets|js|fonts|images|img|pdfs|captcha|media|robots\.txt|ckeditor|vendors|bootstrap|ckfinder|flash|channel\.html|favicon\.ico|favicon\-16x16\.png|favicon\-32x32\.png)
+RewriteRule ^(.*)$ /index.php/$1 [L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^index\.php$ http://www.firsthonor.co.th/ [R=301,L]

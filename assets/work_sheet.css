@@ -1,0 +1,97 @@
+hr {
+    min-height: 2px;
+    background-color: #CCCCCC;
+    width: 100%;
+}
+
+.w-wrap {
+    word-wrap: break-word;
+}
+
+.work-sheet-carlendar {
+    height: 100%;
+    overflow-x: auto;
+    max-width: 650px;
+}
+
+.holiday_td {
+    background-color: #cccccc
+}
+
+.range_task {
+    background-color: #85CED2;
+}
+
+.range_task_over {
+    background-color: #FF4D4D;
+}
+.range_task_interfere {
+    background-color: #A08A8A;
+}
+
+.click_add_resource {
+    cursor: pointer;
+}
+
+th {
+    cursor: pointer;
+}
+
+.lowfont {
+    font-size: 12px
+}
+
+.no-margin-left {
+    margin-left: 0px!important;
+}
+
+.input-assign {
+    width: 60%;
+    height: 60%;
+    border: none;
+    text-align: center;
+    background-color: rgba(0,0,0,0);
+}
+.input-assign[disabled] {
+     cursor: not-allowed;
+    background-color: rgba(0,0,0,0);
+
+}
+
+.table-nopadding td {
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table td.td-no-padding {
+    padding: 0px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.table tr td.hiligh-border-bot {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #000;
+}
+input{color:#000;}
+.ui-state-highlight { height: 80px; line-height: 80px; }
+
+.s_holiday_td{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-weight: bolder;
+}
+.leave_td{
+    color: white;
+    background-color: blue;
+    text-align: center;
+    font-weight: bolder;
+}
+.curday_td{
+    color: black;
+    background-color: #77CC89;
+    text-align: center;
+    font-weight: bolder;
+}

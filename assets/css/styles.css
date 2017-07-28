@@ -1,0 +1,8 @@
+.modal-footer {   border-top: 0px; }
+select{ color: #000000}
+table td.date{
+	min-width: 140px;
+}
+.ตรวจสอบแล้ว{
+	color: red;
+}

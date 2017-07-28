@@ -3,7 +3,7 @@ admin_app.controller('swap_prem', function($scope, $http) {
     $scope.init_prem = {
         resource: {
             'prem': 'resource',
-            'name': 'Resource'
+            'name': 'Figther'
         },
         hod: {
             'prem': 'hod',

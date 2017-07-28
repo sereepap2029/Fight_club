@@ -129,7 +129,7 @@ $ci =& get_instance();
                                                 <a href="<? echo site_url('admin/user_list/')?>">User list</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/user_structure')?>">Business Structure</a>
+                                                <a href="<? echo site_url('admin/user_structure')?>">Structure</a>
                                             </li>
                                             <?
                                             if (isset($user_data->prem['admin'])) {
@@ -150,30 +150,30 @@ $ci =& get_instance();
                             if (isset($user_data->prem['admin'])) {
                                 ?>
                                     <li class="dropdown">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Service Item <b class="caret"></b>
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">ศิลปะการต่อสู้<b class="caret"></b>
 
                                         </a>
                                         <ul class="dropdown-menu" id="menu1">                                            
                                             <li>
-                                                <a href="<? echo site_url('admin/hour_rate_add')?>">เพิ่ม Service Item</a>
+                                                <a href="<? echo site_url('admin/hour_rate_add')?>">เพิ่ม ศิลปะการต่อสู้</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/hour_rate_list/')?>">Service Item list</a>
+                                                <a href="<? echo site_url('admin/hour_rate_list/')?>">รายการ ศิลปะการต่อสู้</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/pos_rate_chart/')?>">Position to Service Item Chart</a>
+                                                <a href="<? echo site_url('admin/pos_rate_chart/')?>">คลาส to ศิลปะการต่อสู้</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/rate_pos_chart/')?>">Service to position Chart</a>
+                                                <a href="<? echo site_url('admin/rate_pos_chart/')?>">ศิลปะการต่อสู้ to คลาส</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/rate_pos_chart_table/')?>">Service VS position Table</a>
+                                                <a href="<? echo site_url('admin/rate_pos_chart_table/')?>">ตาราง ศิลปะการต่อสู้ VS คลาส</a>
                                             </li>
 
                                         </ul>
                                     </li>
                                     <?
-                                }
+                                }/*
                             if (isset($user_data->prem['admin'])||isset($user_data->prem['account'])) {
                                 ?>
                                     <li class="dropdown">
@@ -191,26 +191,26 @@ $ci =& get_instance();
                                         </ul>
                                     </li>
                                     <?
-                                 }
+                                 }*/
                             if (isset($user_data->prem['admin'])) {
                                 ?>
                                     <li class="dropdown">
-                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Company <b class="caret"></b>
+                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">ทีม และ คลาส <b class="caret"></b>
 
                                         </a>
                                         <ul class="dropdown-menu" id="menu1">                                            
                                             <li>
-                                                <a href="<? echo site_url('admin/business')?>">Business Unit</a>
+                                                <a href="<? echo site_url('admin/business')?>">ค่าย</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/department')?>">Department</a>
+                                                <a href="<? echo site_url('admin/department')?>">ทีม</a>
                                             </li>
                                             <li>
-                                                <a href="<? echo site_url('admin/position')?>">Position</a>
+                                                <a href="<? echo site_url('admin/position')?>">คลาส</a>
                                             </li>
 
                                         </ul>
-                                    </li>
+                                    </li><?/*
                                     <li class="dropdown">
                                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Traffic control<b class="caret"></b>
 
@@ -228,12 +228,12 @@ $ci =& get_instance();
                                         </ul>
                                     </li>
                                         
-                                <?
+                                <?*/
                             }
-                                ?>  
+                                /*?>  
                                 <li >
                                     <a href="<? echo site_url('admin/project_cancel_list');?>">Canceled Project</a>
-                                </li>   
+                                </li>   */?>
                                 <li >
                                     <a href="<? echo site_url('gate');?>">Back to Main</a>
                                 </li>                            

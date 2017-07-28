@@ -336,7 +336,6 @@ class admin extends CI_Controller
     public function delete_user() {
         $id = $this->uri->segment(3, '');
         $this->m_user->delete_user($id);
-        $this->m_pce->sync_hod_all_pce();
         redirect('admin/user_list');
     }
     
@@ -477,7 +476,6 @@ class admin extends CI_Controller
                 $data = array(
                     'name' => $_POST['name'], 
                     'hour_rate' => $_POST['hour_rate'],
-                    'is_special' => $_POST['is_special'],
                     'description' => $_POST['description'],
                     );
                 $this->m_hour_rate->add_hour_rate($data);
@@ -523,7 +521,6 @@ class admin extends CI_Controller
                 $data = array(
                     'name' => $_POST['name'], 
                     'hour_rate' => $_POST['hour_rate'],
-                    'is_special' => $_POST['is_special'],
                     'description' => $_POST['description'],
                     );
                 $this->m_hour_rate->update_hour_rate($data, $id);

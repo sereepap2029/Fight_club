@@ -24,7 +24,7 @@ if (count($user_data->prem)==1&&!isset($havede)) {
                                       <ul class="btn-group_gate">
 
                                         <li>
-                                          <? if (isset($user_data->prem['csd'])) { 
+                                          <?/* if (isset($user_data->prem['csd'])) { 
                                             if ($direct_to_dash) {
                                               ?>
                                               <script type="text/javascript">
@@ -114,11 +114,10 @@ if (count($user_data->prem)==1&&!isset($havede)) {
                                           <?}?>
                                         </li>
                                         <li>
-                                          <? if (isset($havede)) { ?>
-                                            <a class="btn btn-success" href="<? echo site_url('delegate')?>">
-                                              Delegate - Project <i class="icon-plus icon-white"></i>
+                                          <?*/ ?>
+                                            <a class="btn btn-success" href="<? echo site_url('hr')?>">
+                                              ปฏิทินลงซ้อม <i class="icon-plus icon-white"></i>
                                             </a>
-                                          <?}?>
                                         </li>
                                       </ul>
                                          

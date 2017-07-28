@@ -82,7 +82,17 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="focusedInput">เบอร์โทรพนักงาน</label>
+                                        <label class="control-label" for="focusedInput">น้ำหนัก</label>
+                                        <div class="controls">
+                                            <? if (!isset($edit)) { ?>
+                                            <input class="focused" id="" type="text" name="weight">
+                                            <? }else{ ?>
+                                            <input class="focused" id="" type="text" name="weight" value="<?echo $user->weight;?>">
+                                            <? } ?>
+                                        </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="focusedInput">เบอร์โทร</label>
                                         <div class="controls">
                                             <? if (!isset($edit)) { ?>
                                             <input class="focused" id="" type="text" name="phone">
@@ -90,6 +100,26 @@
                                             <input class="focused" id="" type="text" name="phone" value="<?echo $user->phone;?>">
                                             <? } ?>
                                         </div>
+                                    </div>
+                                    <div class="control-group">
+                                        <label class="control-label" for="role">Style</label>
+                                        <div class="controls">
+                                            <select id="position" class="chzn-select" name="position">
+                                                <option value="no">-----please select-----</option>
+                                                <? foreach ($position_list as $key=> $value) { ?>
+                                                <option value="<?=$value->id?>"><?=$value->department->bu->name." : ".$value->department->name." : ".$value->name?></option>
+                                                <? } ?>
+                                            </select>
+                                        </div>
+                                        <? if (isset($edit)) { 
+                                            if ($user->position==""||$user->position==null) {
+                                                $user->position="no";
+                                            }
+                                            ?>
+                                        <script type="text/javascript">
+                                        $("#position").val("<?echo $user->position;?>")
+                                        </script>
+                                        <? } ?>
                                     </div>
                                     <div class="control-group">
                                         <span class="btn btn-success fileinput-button">

@@ -9,13 +9,13 @@ $ci =& get_instance();
                         <!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Position list</div>
+                                <div class="muted pull-left">รายการคลาส</div>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
                                    <div class="table-toolbar">
                                       <div class="btn-group">
-                                         <a href="<? echo site_url('admin/position_add')?>"><button class="btn btn-success">Add New Position <i class="icon-plus icon-white"></i></button></a>
+                                         <a href="<? echo site_url('admin/position_add')?>"><button class="btn btn-success">เพิ่มคลาส<i class="icon-plus icon-white"></i></button></a>
                                       </div>                                      
                                    </div>
                                     
@@ -23,9 +23,9 @@ $ci =& get_instance();
                                         <thead>
                                             <tr>
                                               <th>#</th>
-                                              <th>position</th>
-                                              <th>Department</th>
-                                              <th>Business Unit</th>
+                                              <th>คลาส</th>
+                                              <th>ทีม</th>
+                                              <th>ค่าย</th>
                                               <th>Action</th>
                                           </tr>
                                         </thead>

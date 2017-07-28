@@ -13,7 +13,7 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">Add Service Item </div>
+                        <div class="muted pull-left">เพิ่ม ศิลปะการต่อสู้ </div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
@@ -23,7 +23,7 @@
                             <form class="form-horizontal" method="post" action="<? if(isset($edit)){echo site_url('admin/hour_rate_edit/'.$hour_rate->id);}else{echo site_url('admin/hour_rate_add');}?>">
                                 <fieldset>
                                     <div class="control-group">
-                                        <label class="control-label" for="focusedInput">Service Item</label>
+                                        <label class="control-label" for="focusedInput">ศิลปะการต่อสู้</label>
                                         <div class="controls">
                                             <? if (!isset($edit)) { ?>
                                             <input class="focused" id="" type="text" name="name">
@@ -43,7 +43,7 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="focusedInput">Description</label>
+                                        <label class="control-label" for="focusedInput">รายละเอียด</label>
                                         <div class="controls">
                                             <? if (!isset($edit)) { ?>
                                             <textarea class="focused" name="description" style="width:80%;height:200px"></textarea>
@@ -51,20 +51,6 @@
                                             <textarea class="focused" id="" type="text" name="description" style="width:80%;height:200px"><?echo $hour_rate->description;?></textarea>
                                             <? } ?>
                                         </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <label class="control-label" for="role">Special Task<br><font style="color:red">(Task นี้ ไม่จำเป็นต้องให้ HOD Approved)</font></label>
-                                        <div class="controls">
-                                            <select id="is_special" class="chzn-select" name="is_special">
-                                                <option value="n">No</option>
-                                                <option value="y">Yes</option>
-                                            </select>
-                                        </div>
-                                        <? if (isset($edit)) { ?>
-                                        <script type="text/javascript">
-                                        $("#is_special").val("<?echo $hour_rate->is_special;?>")
-                                        </script>
-                                        <? } ?>
                                     </div>
                                     <div class="control-group">
                                         <button type="submit" class="btn btn-primary">บันทึก</button>

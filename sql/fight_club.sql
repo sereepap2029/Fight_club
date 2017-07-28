@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50713
 File Encoding         : 65001
 
-Date: 2017-07-28 16:01:44
+Date: 2017-07-28 17:11:19
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,11 +27,7 @@ CREATE TABLE `business` (
 -- ----------------------------
 -- Records of business
 -- ----------------------------
-INSERT INTO `business` VALUES ('2a9a300a3e', 'VIRT');
-INSERT INTO `business` VALUES ('3640c5f389', 'NeuMerlin Group');
-INSERT INTO `business` VALUES ('474dbb5fe5', 'SALAD');
-INSERT INTO `business` VALUES ('8350845b18', 'BRAND-One');
-INSERT INTO `business` VALUES ('92e737e38c', 'NeuMerlin');
+INSERT INTO `business` VALUES ('526eefdf64', 'Fight Club');
 
 -- ----------------------------
 -- Table structure for `department`
@@ -47,16 +43,7 @@ CREATE TABLE `department` (
 -- ----------------------------
 -- Records of department
 -- ----------------------------
-INSERT INTO `department` VALUES ('0ed3fce2bc', 'Financial and Administration', '3640c5f389');
-INSERT INTO `department` VALUES ('3a153505b6', 'Interactive Design', '2a9a300a3e');
-INSERT INTO `department` VALUES ('6793d26352', 'Design', '474dbb5fe5');
-INSERT INTO `department` VALUES ('7da18ca3a4', 'Client Service', '474dbb5fe5');
-INSERT INTO `department` VALUES ('7f31aa7350', 'Client Service', '2a9a300a3e');
-INSERT INTO `department` VALUES ('9e51c17d18', 'Strategic Planning', '92e737e38c');
-INSERT INTO `department` VALUES ('c9d51953a7', 'Content Creative', '2a9a300a3e');
-INSERT INTO `department` VALUES ('d18ecad5b7', 'Creative', '92e737e38c');
-INSERT INTO `department` VALUES ('d797c82a89', 'Executive Office', '3640c5f389');
-INSERT INTO `department` VALUES ('f9f8c3c15a', 'Client Service', '92e737e38c');
+INSERT INTO `department` VALUES ('42a4b6af67', 'บางนา', '526eefdf64');
 
 -- ----------------------------
 -- Table structure for `group_has_prem`
@@ -67,12 +54,11 @@ CREATE TABLE `group_has_prem` (
   `g_id` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `prem` enum('resource','hod','csd','cs','fc','hr','account','admin') COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=123 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of group_has_prem
 -- ----------------------------
-INSERT INTO `group_has_prem` VALUES ('55', '90ce2f6d18', 'resource');
 INSERT INTO `group_has_prem` VALUES ('63', 'b766a60fdf', 'admin');
 INSERT INTO `group_has_prem` VALUES ('84', 'e46b263a8b', 'cs');
 INSERT INTO `group_has_prem` VALUES ('85', '4492c86c1f', 'hod');
@@ -94,6 +80,7 @@ INSERT INTO `group_has_prem` VALUES ('119', 'd01f1bb419', 'csd');
 INSERT INTO `group_has_prem` VALUES ('120', 'd01f1bb419', 'fc');
 INSERT INTO `group_has_prem` VALUES ('121', 'c574df262c', 'hod');
 INSERT INTO `group_has_prem` VALUES ('122', 'c574df262c', 'resource');
+INSERT INTO `group_has_prem` VALUES ('123', '90ce2f6d18', 'resource');
 
 -- ----------------------------
 -- Table structure for `group_prem`
@@ -113,12 +100,83 @@ INSERT INTO `group_prem` VALUES ('19cd8f13c2', 'Accounting');
 INSERT INTO `group_prem` VALUES ('4492c86c1f', 'HOD');
 INSERT INTO `group_prem` VALUES ('8214458c2f', 'FC');
 INSERT INTO `group_prem` VALUES ('887f612752', 'HOD and res');
-INSERT INTO `group_prem` VALUES ('90ce2f6d18', 'Resource');
+INSERT INTO `group_prem` VALUES ('90ce2f6d18', 'Fighter');
 INSERT INTO `group_prem` VALUES ('9b360ceb6a', 'HR');
 INSERT INTO `group_prem` VALUES ('b766a60fdf', 'admin');
 INSERT INTO `group_prem` VALUES ('c574df262c', 'HOD and Resource');
 INSERT INTO `group_prem` VALUES ('d01f1bb419', 'CSD');
 INSERT INTO `group_prem` VALUES ('e46b263a8b', 'CS');
+
+-- ----------------------------
+-- Table structure for `holiday`
+-- ----------------------------
+DROP TABLE IF EXISTS `holiday`;
+CREATE TABLE `holiday` (
+  `time` bigint(11) NOT NULL DEFAULT '0',
+  `comment` text COLLATE utf8_unicode_ci,
+  `is_holiday` enum('n','y') COLLATE utf8_unicode_ci DEFAULT 'n',
+  PRIMARY KEY (`time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of holiday
+-- ----------------------------
+INSERT INTO `holiday` VALUES ('1451581201', 'วันหยุดปีใหม่', 'y');
+INSERT INTO `holiday` VALUES ('1456074001', 'วันมาฆบูชา', 'y');
+INSERT INTO `holiday` VALUES ('1459875601', 'วันจักกรี ', 'y');
+INSERT INTO `holiday` VALUES ('1460480401', 'วันสงกรานต์ ', 'y');
+INSERT INTO `holiday` VALUES ('1460566801', 'วันสงกรานต์ ', 'y');
+INSERT INTO `holiday` VALUES ('1460653201', 'วันสงกรานต์ ', 'y');
+INSERT INTO `holiday` VALUES ('1462122001', 'วันเเรงงาน', 'y');
+INSERT INTO `holiday` VALUES ('1462381201', 'วันฉัตรมงคล', 'y');
+INSERT INTO `holiday` VALUES ('1463677201', 'วันวิสาขบูชา', 'y');
+INSERT INTO `holiday` VALUES ('1468861201', 'วันอาสาฬหบูชา', 'y');
+INSERT INTO `holiday` VALUES ('1470330001', 'no comment', 'n');
+INSERT INTO `holiday` VALUES ('1470934801', 'วันเเม่เเห่งชาติ', 'y');
+INSERT INTO `holiday` VALUES ('1477242001', 'วันหยุดชดเชยวันปิยมหาราช', 'y');
+INSERT INTO `holiday` VALUES ('1480870801', 'วันพ่อเเห่งชาติ', 'y');
+INSERT INTO `holiday` VALUES ('1481475601', 'วันหยุดชดเชยวันรัฐธรรมนูญ', 'y');
+INSERT INTO `holiday` VALUES ('1483290001', 'วันหยุดชดเชยปีใหม่ ', 'y');
+INSERT INTO `holiday` VALUES ('1483376401', 'วันหยุดชดเชยตามประกาศ ครม ', 'y');
+INSERT INTO `holiday` VALUES ('1486918801', 'วันหยุดชดเชยมาฆบูชา ', 'y');
+INSERT INTO `holiday` VALUES ('1487005201', 'no comment', 'n');
+INSERT INTO `holiday` VALUES ('1491411601', 'วันจักกรี', 'y');
+INSERT INTO `holiday` VALUES ('1492016401', 'วันสงกรานตร์ ', 'y');
+INSERT INTO `holiday` VALUES ('1492102801', 'วันสงกรานตร์ ', 'y');
+INSERT INTO `holiday` VALUES ('1492362001', 'ชดเชยวันสงกรานต์ ', 'y');
+INSERT INTO `holiday` VALUES ('1493571601', 'วันเเรงงานเเห่งชาติ', 'y');
+INSERT INTO `holiday` VALUES ('1493917201', 'วันฉัตรมงคล', 'n');
+INSERT INTO `holiday` VALUES ('1494349201', 'วันวิสาฆบูชา', 'y');
+INSERT INTO `holiday` VALUES ('1499619601', 'วันหยุดชดเชยวันอาสาฬหบูชา', 'y');
+INSERT INTO `holiday` VALUES ('1501174801', 'no comment', 'y');
+INSERT INTO `holiday` VALUES ('1502643601', 'วันหยุดชดเชยวันเเม่เเห่งชาติ', 'y');
+INSERT INTO `holiday` VALUES ('1508691601', 'วันปิยมหาราช', 'y');
+INSERT INTO `holiday` VALUES ('1512406801', 'วันคล้ายวันเฉลิมพระชนมพรรษาของพระบาทสมเด็จพระปรมินมหาภูมิพล (วันพ่อเเห่งชาติ )', 'y');
+INSERT INTO `holiday` VALUES ('1512925201', 'วันหยุดชดเชยวันรัฐธรรมนูญ', 'y');
+
+-- ----------------------------
+-- Table structure for `hour_rate`
+-- ----------------------------
+DROP TABLE IF EXISTS `hour_rate`;
+CREATE TABLE `hour_rate` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `hour_rate` int(11) DEFAULT '0',
+  `description` text COLLATE utf8_unicode_ci,
+  `is_special` enum('n','y') COLLATE utf8_unicode_ci DEFAULT 'n',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of hour_rate
+-- ----------------------------
+INSERT INTO `hour_rate` VALUES ('1', 'มวยไทย', '0', '', 'n');
+INSERT INTO `hour_rate` VALUES ('2', 'ยูโด', '0', '', 'n');
+INSERT INTO `hour_rate` VALUES ('3', 'มวยสากล', '0', '', 'n');
+INSERT INTO `hour_rate` VALUES ('4', 'มวยปล้ำ', '0', '', 'n');
+INSERT INTO `hour_rate` VALUES ('5', 'เทควันโด', '0', '', 'n');
+INSERT INTO `hour_rate` VALUES ('6', 'คาราเต้', '0', '', 'n');
+INSERT INTO `hour_rate` VALUES ('7', 'คาโปเอร่า', '0', '', 'n');
 
 -- ----------------------------
 -- Table structure for `position`
@@ -136,52 +194,43 @@ CREATE TABLE `position` (
 -- ----------------------------
 -- Records of position
 -- ----------------------------
-INSERT INTO `position` VALUES ('04fd3f07b9', 'Strategic Planner', '9e51c17d18', '', 'n');
-INSERT INTO `position` VALUES ('0b1ef6b97e', 'Accounting Supervisor', '0ed3fce2bc', '', 'y');
-INSERT INTO `position` VALUES ('19128f5ec2', 'Interactive Design Group Head', '3a153505b6', '', 'n');
-INSERT INTO `position` VALUES ('1a6d060d22', 'Designer - Art Production', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('1d4c5f0659', 'Senior Back-End Developer - IT2', '3a153505b6', null, 'n');
-INSERT INTO `position` VALUES ('1f95c05128', 'Account Executive', '7da18ca3a4', '', 'y');
-INSERT INTO `position` VALUES ('1fd7b52b24', 'Account Executive', 'f9f8c3c15a', '', 'y');
-INSERT INTO `position` VALUES ('2e4099b1e8', 'Art Production Manager', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('3740f98ad9', 'Creative - Copy Writer', 'd18ecad5b7', '', 'n');
-INSERT INTO `position` VALUES ('38e4ba787f', 'Account Director', 'f9f8c3c15a', '', 'y');
-INSERT INTO `position` VALUES ('3b0285d32c', 'Account Manager', '7f31aa7350', '', 'y');
-INSERT INTO `position` VALUES ('3df6640c39', 'Business Development Manager', 'd797c82a89', '', 'y');
-INSERT INTO `position` VALUES ('401fc4b0a8', 'Group Managing Director', 'd797c82a89', '', 'n');
-INSERT INTO `position` VALUES ('43066bb2a1', 'Financial Director', 'd797c82a89', '', 'n');
-INSERT INTO `position` VALUES ('564df0d8a6', 'Digital Content Designer', 'c9d51953a7', '', 'n');
-INSERT INTO `position` VALUES ('5a853377e7', 'Senior Designer ', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('5cb6e3d8d0', 'Senior Designer - Art Production', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('6514ba55f0', 'Content Administrator ', 'c9d51953a7', '', 'n');
-INSERT INTO `position` VALUES ('685aaabe2b', 'Design and Technology Director', 'd797c82a89', '', 'n');
-INSERT INTO `position` VALUES ('8e100d246e', 'Maid', '0ed3fce2bc', '', 'y');
-INSERT INTO `position` VALUES ('976dd91fe9', 'Dev Acc', 'd797c82a89', 'just Dev Acc', 'n');
-INSERT INTO `position` VALUES ('aa625fbd16', 'Digital Content Creative', 'd18ecad5b7', '', 'n');
-INSERT INTO `position` VALUES ('ac40e401ce', 'Digital Content / Interactive Designer (Special)', 'c9d51953a7', 'สร้างมาให้จอย เพราะทำ Interactive Design ได้ด้วย', 'n');
-INSERT INTO `position` VALUES ('af143bde3b', 'Account Manager', '7da18ca3a4', '', 'y');
-INSERT INTO `position` VALUES ('b447ca5e41', 'Senior Creative - Copy Writer', 'd18ecad5b7', '', 'n');
-INSERT INTO `position` VALUES ('b55539c1c2', 'Business Director', 'd797c82a89', '', 'y');
-INSERT INTO `position` VALUES ('bb44fb0241', 'Design Group Head ', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('bba9206142', 'Interactive Designer', '3a153505b6', '', 'n');
-INSERT INTO `position` VALUES ('bbbbf283af', 'Account Manager', 'f9f8c3c15a', '', 'y');
-INSERT INTO `position` VALUES ('bd2c4876e2', 'Back-end Developer - IT1', '3a153505b6', null, 'n');
-INSERT INTO `position` VALUES ('bd70f42fe0', 'Art Director', 'd18ecad5b7', '', 'n');
-INSERT INTO `position` VALUES ('c436f6a52f', 'Design Director', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('c65016c8d9', 'Executive Creative Director', 'd18ecad5b7', '', 'n');
-INSERT INTO `position` VALUES ('cb81616301', 'Accounting Officer', '0ed3fce2bc', '', 'y');
-INSERT INTO `position` VALUES ('ce66324d06', 'Digital Content Manager', 'c9d51953a7', '', 'n');
-INSERT INTO `position` VALUES ('d08a2544cf', 'Senior Account Executive', 'f9f8c3c15a', '', 'y');
-INSERT INTO `position` VALUES ('d0c8461f25', 'Account Director', '7f31aa7350', '', 'y');
-INSERT INTO `position` VALUES ('d7b0c85026', 'Front-End Developer - IT1', '3a153505b6', null, 'n');
-INSERT INTO `position` VALUES ('dd19b3891c', 'Visualiser', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('dda713cbb4', 'Senior Front-End Developer - IT2', '3a153505b6', null, 'n');
-INSERT INTO `position` VALUES ('e2264b2805', 'Messenger', '0ed3fce2bc', '', 'y');
-INSERT INTO `position` VALUES ('e2612e8354', 'Human Resource Supervisor', '0ed3fce2bc', '', 'y');
-INSERT INTO `position` VALUES ('e4345cb2bd', 'Strategic Planning Manager', '9e51c17d18', '', 'n');
-INSERT INTO `position` VALUES ('eb394572c6', 'Account Executive', '7f31aa7350', '', 'y');
-INSERT INTO `position` VALUES ('f5ae86313c', 'Designer', '6793d26352', '', 'n');
-INSERT INTO `position` VALUES ('f8bf0f7f56', 'Senior Interactive Designer', '3a153505b6', '', 'n');
+INSERT INTO `position` VALUES ('308c239d4a', 'Swifter (เข้าใวออกใว)', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('58f6e59dba', 'นักมวย', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('624fe44364', 'คาราเต้', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('7a764f647d', 'มวยสากล', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('ab201de2f3', 'Crusher (สายนอนสู้)', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('acf866cd5c', 'คาโปเอร่า', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('cba9c8b2b4', 'มวยปล้ำ', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('f1f87c8616', 'เทควันโด', '42a4b6af67', '', 'n');
+INSERT INTO `position` VALUES ('f6fe90dcc2', 'มวยไทย', '42a4b6af67', '', 'n');
+
+-- ----------------------------
+-- Table structure for `position_has_hour_rate`
+-- ----------------------------
+DROP TABLE IF EXISTS `position_has_hour_rate`;
+CREATE TABLE `position_has_hour_rate` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `position_id` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `hour_rate_id` bigint(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of position_has_hour_rate
+-- ----------------------------
+INSERT INTO `position_has_hour_rate` VALUES ('1', '58f6e59dba', '1');
+INSERT INTO `position_has_hour_rate` VALUES ('2', '58f6e59dba', '3');
+INSERT INTO `position_has_hour_rate` VALUES ('3', 'ab201de2f3', '2');
+INSERT INTO `position_has_hour_rate` VALUES ('4', 'ab201de2f3', '4');
+INSERT INTO `position_has_hour_rate` VALUES ('5', '308c239d4a', '5');
+INSERT INTO `position_has_hour_rate` VALUES ('6', '308c239d4a', '6');
+INSERT INTO `position_has_hour_rate` VALUES ('7', '308c239d4a', '7');
+INSERT INTO `position_has_hour_rate` VALUES ('8', 'f1f87c8616', '5');
+INSERT INTO `position_has_hour_rate` VALUES ('9', '624fe44364', '6');
+INSERT INTO `position_has_hour_rate` VALUES ('10', 'f6fe90dcc2', '1');
+INSERT INTO `position_has_hour_rate` VALUES ('11', '7a764f647d', '3');
+INSERT INTO `position_has_hour_rate` VALUES ('12', 'acf866cd5c', '7');
+INSERT INTO `position_has_hour_rate` VALUES ('13', 'cba9c8b2b4', '4');
 
 -- ----------------------------
 -- Table structure for `user`
@@ -207,4 +256,38 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('sereepap2029', '12345', 'Atom', 'Atom', 'Atom', '0', '0804032819', '1234567890', 'sereepap2029_sign_1501231646.PNG', 'no', 'no', '1501174801', '100');
+INSERT INTO `user` VALUES ('Atom', '14499', 'อะตอม', 'เสรีภาพ', 'คำสี', '1501235820', '0804032819', '90ce2f6d18', 'Atom_sign.jpg', null, '308c239d4a', '1501174801', '100');
+INSERT INTO `user` VALUES ('sereepap2029', '12345', 'Atom', 'Atom', 'Atom', '1501236487', '0804032819', '1234567890', 'sereepap2029_sign_1501231646.PNG', 'no', '38e4ba787f', '1501174801', '100');
+
+-- ----------------------------
+-- Table structure for `user_has_hour_rate`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_has_hour_rate`;
+CREATE TABLE `user_has_hour_rate` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `usn` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `hour_rate_id` bigint(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of user_has_hour_rate
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `user_leave`
+-- ----------------------------
+DROP TABLE IF EXISTS `user_leave`;
+CREATE TABLE `user_leave` (
+  `id` bigint(11) NOT NULL AUTO_INCREMENT,
+  `time_day` bigint(11) DEFAULT NULL,
+  `time_start` bigint(11) DEFAULT NULL,
+  `time_end` bigint(11) DEFAULT NULL,
+  `usn` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of user_leave
+-- ----------------------------
+INSERT INTO `user_leave` VALUES ('1', '1483549201', '1483581601', '1483632001', 'Atom');

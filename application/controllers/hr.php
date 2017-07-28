@@ -11,7 +11,7 @@ public function __construct() {
         $this->load->model('m_hr');
         if ($this->session->userdata('username')) {
             $user_data = $this->m_user->get_user_by_login_name($this->session->userdata('username'));
-            if (isset($user_data->username) && isset($user_data->prem['hr'])) {
+            if (isset($user_data->username)) {
                 $this->user_data = $user_data;
             }
             else {

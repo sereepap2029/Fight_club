@@ -26,7 +26,7 @@
                                 <fieldset>
                                 <input type="hidden" id="init_hour" link="<?echo site_url('admin/hour_rate_ajax');?>">
                                     <div class="control-group">
-                                        <label class="control-label" for="focusedInput">Position Name</label>
+                                        <label class="control-label" for="focusedInput">ชื่อคลาส</label>
                                         <div class="controls">
                                             <? if (!isset($edit)) { ?>
                                             <input class="focused" id="pos_name" pid="" type="text" name="name">
@@ -36,7 +36,7 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="role">Department</label>
+                                        <label class="control-label" for="role">ชื่อทีม</label>
                                         <div class="controls">
                                             <select id="department_id" class="chzn-select" name="department_id">
                                                 <option value="no">-----please select-----</option>

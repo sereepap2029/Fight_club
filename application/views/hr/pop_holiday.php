@@ -26,7 +26,7 @@ $ci =& get_instance();
                                         <thead>
                                             <tr>
                                               <th>Holiday</th>
-                                              <th>Comment</th>                                          
+                                              <th>ชื่อกิจกรรม</th>                                          
                                           </tr>
                                         </thead>
                                         <tbody>

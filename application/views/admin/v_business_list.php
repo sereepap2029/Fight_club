@@ -9,13 +9,13 @@ $ci =& get_instance();
                         <!-- block -->
                         <div class="block">
                             <div class="navbar navbar-inner block-header">
-                                <div class="muted pull-left">Client list</div>
+                                <div class="muted pull-left">รายการ ค่าย</div>
                             </div>
                             <div class="block-content collapse in">
                                 <div class="span12">
                                    <div class="table-toolbar">
                                       <div class="btn-group">
-                                         <a href="<? echo site_url('admin/business_add')?>"><button class="btn btn-success">Add New business <i class="icon-plus icon-white"></i></button></a>
+                                         <a href="<? echo site_url('admin/business_add')?>"><button class="btn btn-success">เพิ่มค่าย <i class="icon-plus icon-white"></i></button></a>
                                       </div>                                      
                                    </div>
                                     

@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Bootstrap Login Form</title>
+		<title>Fight Club Bangna Login Form</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="<?echo site_url();?>assets/css/bootstrap.css" rel="stylesheet">
@@ -37,7 +37,7 @@
             </div>
             <div class="form-group">
               <button class="btn btn-primary btn-lg btn-block">Sign In</button>
-              <!--<span class="pull-right"><a href="#">Register</a></span><span><a href="#">Need help?</a></span>-->
+              <span class="pull-right"><a href="<? echo site_url('main/register');?>">สมัครสมาชิก</a></span><span><a href="#">Need help?</a></span>
             </div>
           </form>
       </div>

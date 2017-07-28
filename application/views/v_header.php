@@ -129,31 +129,13 @@
                             <a href="<? echo site_url('gate');?>">หน้าหลัก</a>
                         </li>
                         <?
-                        if (isset($user_data->prem['cs'])) {
-                            ?>
-                            
-                            <li class="dropdown">
-                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Project <b class="caret"></b>
-
-                                            </a>
-                                <ul class="dropdown-menu" id="menu_help">
-                                    <li>
-                                        <a href="<? echo site_url('project/add');?>">เพิ่ม Project</a>
-                                    </li>
-                                    <li>
-                                        <a href="<? echo site_url('cs');?>">Project List</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <?
-                        }
                         if (isset($user_data->prem['resource'])) {
                             ?>
                             <li>
-                                <a href="<? echo site_url('res/res_manager_overall');?>">Resource Manager</a>
+                                <a href="<? echo site_url('hr');?>">ปฏิทินลงซ้อม</a>
                             </li>
                             <?
-                        }
+                        }/*
                         if (isset($user_data->prem['cs'])||isset($user_data->prem['admin'])||isset($user_data->prem['account'])||isset($user_data->prem['csd'])||isset($user_data->prem['fc'])) {
                             ?>
                             
@@ -274,7 +256,7 @@
                                     </li>
                                 </ul>
                             </li>
-                        <?
+                        <?*/
                         if (isset($user_data->prem['admin'])||isset($user_data->prem['hr'])||isset($user_data->prem['account'])) {
                             ?>
                             <li <?if (isset($admin)) { ?>class="active"

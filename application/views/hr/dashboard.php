@@ -20,12 +20,12 @@ $ci =& get_instance();
                                       <ul class="btn-group_gate">
 
                                         <li>
-                                            <a class="btn btn-success" href="<? echo site_url('hr/holiday_carlendar')?>">ปฏิทินวันหยุด</i>
+                                            <a class="btn btn-success" href="<? echo site_url('hr/holiday_carlendar')?>">ปฏิทินกิจกรรมอื่นๆ</i>
                                             </a>
                                         </li>
 
                                          <li>
-                                            <a class="btn btn-success" href="<? echo site_url('hr/user_leave_carlendar')?>">ปฏิทินวันลา</i>
+                                            <a class="btn btn-success" href="<? echo site_url('hr/user_leave_carlendar')?>">ปฏิทินวันซ้อม</i>
                                         </a>
                                         </li>                                        
                                       </ul>

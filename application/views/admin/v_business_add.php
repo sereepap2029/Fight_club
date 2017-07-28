@@ -13,7 +13,7 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">Add Business </div>
+                        <div class="muted pull-left">ค่าย </div>
                     </div>
                     <div class="block-content collapse in">
                         <div class="span12">
@@ -23,7 +23,7 @@
                             <form class="form-horizontal" method="post" action="<? if(isset($edit)){echo site_url('admin/business_edit/'.$business->id);}else{echo site_url('admin/business_add');}?>">
                                 <fieldset>
                                     <div class="control-group">
-                                        <label class="control-label" for="focusedInput">Business Name</label>
+                                        <label class="control-label" for="focusedInput">ชื่อค่าย</label>
                                         <div class="controls">
                                             <? if (!isset($edit)) { ?>
                                             <input class="focused" id="" type="text" name="name">

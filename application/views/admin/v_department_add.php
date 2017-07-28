@@ -13,7 +13,7 @@
                 <!-- block -->
                 <div class="block">
                     <div class="navbar navbar-inner block-header">
-                        <div class="muted pull-left">Add Department </div>
+                        <div class="muted pull-left">เพิ่มทีม</div>
                     </div>
                     <div class="block-content collapse in" style="min-height:600px;">
                         <div class="span12">
@@ -23,7 +23,7 @@
                             <form class="form-horizontal" method="post" action="<? if(isset($edit)){echo site_url('admin/department_edit/'.$department->id);}else{echo site_url('admin/department_add');}?>">
                                 <fieldset>
                                     <div class="control-group">
-                                        <label class="control-label" for="focusedInput">Department Name</label>
+                                        <label class="control-label" for="focusedInput">ชื่อทีม</label>
                                         <div class="controls">
                                             <? if (!isset($edit)) { ?>
                                             <input class="focused" id="" type="text" name="name">
@@ -33,7 +33,7 @@
                                         </div>
                                     </div>
                                     <div class="control-group">
-                                        <label class="control-label" for="role">Business</label>
+                                        <label class="control-label" for="role">ชื่อค่าย</label>
                                         <div class="controls">
                                             <select id="business_id" class="chzn-select" name="business_id">
                                                 <option value="no">-----please select-----</option>

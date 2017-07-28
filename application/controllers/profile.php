@@ -61,6 +61,8 @@ class Profile extends CI_Controller
                     'phone' => $_POST['phone'], 
                     'password' => $_POST['password'], 
                     'nickname' => $_POST['nickname'],
+                    'weight' => $_POST['weight'],
+                    'position' => $_POST['position'],
                     );
                 if ($_POST['file_path'] != "") {
                     echo "in file path    ";

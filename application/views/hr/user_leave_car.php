@@ -193,8 +193,8 @@ $month_name_arr = array(
     $( "td" ).tooltip({});
     $(".fancybox").fancybox({
             fitToView   : false,
-            width       : '60%',
-            height      : '60%',
+            width       : '100%',
+            height      : '90%',
             autoSize    : false,
             closeClick  : false,
             openEffect  : 'none',

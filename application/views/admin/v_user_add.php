@@ -284,7 +284,7 @@ $(function() {
                     } else {
                         $("#file_tmp").attr("alt", "Upload Complete file " + file.name);
                         $("#file_path").val(file.name);
-                        $("#file_tmp").attr("src", '<?php echo site_url('media/temp '); ?>/' + file.name);
+                        $("#file_tmp").attr("src", '<?php echo site_url('media/temp'); ?>/' + file.name);
                     }
                 });
 
